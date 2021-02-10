@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,5 +18,16 @@ public class bullet : MonoBehaviour
     void Update()
     {
         transform.position += transform.up * speed;
+
+
+      
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.GetComponent<EnemyLife>())
+        {
+            other.gameObject.GetComponent<EnemyLife>().Damage(1);
+        }
     }
 }
