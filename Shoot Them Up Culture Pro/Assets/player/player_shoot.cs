@@ -17,7 +17,8 @@ public class player_shoot : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            _poolManager.SpawnFromPool("Bullet", shootpoint.position, Quaternion.identity);
+            Debug.Log("Hello");
+            _poolManager.SpawnFromPool("Bullet", transform.position, Quaternion.identity);
 
         }
     }
