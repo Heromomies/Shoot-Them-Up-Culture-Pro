@@ -36,36 +36,33 @@ public class poolManager : MonoBehaviour
 
             for (int i = 0; i < pool.size; i++)
             {
-              GameObject obj =  Instantiate(pool.prefab);
-              obj.SetActive(false);
-              objectPool.Enqueue(obj);
+                GameObject obj = Instantiate(pool.prefab);
+                obj.SetActive(false);
+                objectPool.Enqueue(obj);
             }
-            
-            
+
+
             poolDictionnary.Add(pool.tag, objectPool);
         }
     }
 
     public GameObject SpawnFromPool(string tag, Vector3 position, Quaternion rotation)
     {
-
-        if (poolDictionnary.ContainsKey(tag))
+        if (!poolDictionnary.ContainsKey(tag))
         {
             return null;
         }
-        
-        
-     GameObject objectToSpawn =   poolDictionnary[tag].Dequeue();
-     
-     
-     objectToSpawn.SetActive(true);
-     objectToSpawn.transform.position = position;
-     objectToSpawn.transform.rotation = rotation;
-     
-     poolDictionnary[tag].Enqueue(objectToSpawn);
 
-     return objectToSpawn;
+
+        GameObject objectToSpawn = poolDictionnary[tag].Dequeue();
+
+
+        objectToSpawn.SetActive(true);
+        objectToSpawn.transform.position = position;
+        objectToSpawn.transform.rotation = rotation;
+
+        poolDictionnary[tag].Enqueue(objectToSpawn);
+
+        return objectToSpawn;
     }
-
-  
 }
