@@ -10,6 +10,9 @@
           <e p="Enemies" t="Include">
             <e p="EnemyLife.cs" t="Include" />
             <e p="EnemyMovement.cs" t="Include" />
+            <e p="EnemyMovementOne.cs" t="Include" />
+            <e p="EnemyMovementThree.cs" t="Include" />
+            <e p="EnemyMovementTwo.cs" t="Include" />
           </e>
         </e>
       </e>
