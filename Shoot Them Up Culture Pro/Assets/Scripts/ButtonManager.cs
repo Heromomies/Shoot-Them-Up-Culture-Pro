@@ -19,6 +19,7 @@ public class ButtonManager : MonoBehaviour
 
     public void Rstart()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
 }

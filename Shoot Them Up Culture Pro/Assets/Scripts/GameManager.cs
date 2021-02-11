@@ -7,24 +7,27 @@ public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreTxt;
     public TextMeshProUGUI lifeTxt;
-    
+
     public int score;
-    
+
     private int _life;
-    
+
     public GameObject panelGameOver;
     public GameObject panelPause;
+    public GameObject player;
 
     private bool _isPause;
     public static GameManager instance;
 
     private void Awake()
     {
+        Time.timeScale = 1;
         instance = this;
     }
 
     private void Update()
     {
+        _life = player.GetComponent<PlayerLife>().currentLife;
         if (_life <= 0)
         {
             Time.timeScale = 0;
