@@ -12,7 +12,7 @@ public class EnemyLife : MonoBehaviour
         if (life <= 0)
         {
             GameManager.instance.UpdateScore(10);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
            
         }
     }
