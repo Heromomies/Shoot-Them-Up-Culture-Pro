@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public GameObject panelGameOver;
     public GameObject panelPause;
     public GameObject player;
+    public GameObject boss;
 
     private bool _isPause;
     public static GameManager instance;
@@ -45,6 +46,11 @@ public class GameManager : MonoBehaviour
             _isPause = false;
             Time.timeScale = 1;
             panelPause.SetActive(false);
+        }
+
+        if (score >= 100)
+        {
+            boss.SetActive(true);
         }
     }
 
