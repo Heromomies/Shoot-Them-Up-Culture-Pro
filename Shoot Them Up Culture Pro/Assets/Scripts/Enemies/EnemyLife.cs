@@ -11,7 +11,9 @@ public class EnemyLife : MonoBehaviour
         life -= amount;
         if (life <= 0)
         {
+            GameManager.instance.UpdateScore(10);
             Destroy(gameObject);
+           
         }
     }
 }

@@ -14,7 +14,7 @@ public class PlayerLife : MonoBehaviour
 
     public GameManager gameManager;
 
-  
+    public bool lifeUp;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,9 +48,10 @@ public class PlayerLife : MonoBehaviour
     private void Update()
     {
         
-        if (gameManager.score == 100)
+        if (gameManager.score == 50 && !lifeUp)
         {
             AddHealth(1);
+            lifeUp = true;
         }
     }
 }
