@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,11 +7,23 @@ public class Boss : MonoBehaviour
 {
     public int life;
 
-    public float speed;
-    public Transform yMax;
+    public float speed, repeatRate;
+    public Transform yMax, shootPoint;
+
     private Vector2 _screenBounds;
     private bool _dirRight;
-    // Update is called once per frame
+    private poolManager _poolManager;
+    
+    public void Start()
+    {
+        _poolManager = poolManager.instance;
+        InvokeRepeating("LaunchBullet", 0, repeatRate);
+    }
+
+    public void LaunchBullet()
+    {
+        _poolManager.SpawnFromPool("BulletBoss", shootPoint.position, Quaternion.identity);
+    }
     void Update()
     {
         if (transform.position.y >= yMax.position.y)

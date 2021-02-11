@@ -13,9 +13,9 @@ public class BulletBoss : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.GetComponent<EnemyLife>())
+        if (other.gameObject.GetComponent<PlayerLife>())
         {
-            //other.gameObject.GetComponent<Player>().Damage(1);
+            other.gameObject.GetComponent<PlayerLife>().TakeDamage(1);
         }
     }
 }
