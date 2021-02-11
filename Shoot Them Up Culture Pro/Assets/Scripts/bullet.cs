@@ -28,5 +28,10 @@ public class bullet : MonoBehaviour
             Debug.Log("ui");
             other.gameObject.GetComponent<EnemyLife>().Damage(1);
         }
+
+        if (other.gameObject.GetComponent<Boss>())
+        {
+            other.gameObject.GetComponent<Boss>().Damage(1);
+        }
     }
 }

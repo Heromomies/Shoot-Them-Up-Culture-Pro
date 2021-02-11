@@ -9,7 +9,8 @@ public class Boss : MonoBehaviour
 
     public float speed, repeatRate;
     public Transform yMax, shootPoint;
-
+    public GameObject panel; 
+    
     private Vector2 _screenBounds;
     private bool _dirRight;
     private poolManager _poolManager;
@@ -64,7 +65,8 @@ public class Boss : MonoBehaviour
         life -= amount;
         if (life <= 0)
         {
-            //TODO victory
+            panel.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
 }
