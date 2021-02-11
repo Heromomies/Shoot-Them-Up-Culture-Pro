@@ -441,7 +441,7 @@ PrefabInstance:
     - target: {fileID: 4653134558724041295, guid: 37c4dc426c6acea4dab94930dffc97a8,
         type: 3}
       propertyPath: pools.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4653134558724041295, guid: 37c4dc426c6acea4dab94930dffc97a8,
         type: 3}
@@ -458,6 +458,27 @@ PrefabInstance:
         type: 3}
       propertyPath: pools.Array.data[1].size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653134558724041295, guid: 37c4dc426c6acea4dab94930dffc97a8,
+        type: 3}
+      propertyPath: pools.Array.data[2].tag
+      value: Enemi
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653134558724041295, guid: 37c4dc426c6acea4dab94930dffc97a8,
+        type: 3}
+      propertyPath: pools.Array.data[2].prefab
+      value: 
+      objectReference: {fileID: 4170755767357342255, guid: 4aece673909281243986f676eeb14ea1,
+        type: 3}
+    - target: {fileID: 4653134558724041295, guid: 37c4dc426c6acea4dab94930dffc97a8,
+        type: 3}
+      propertyPath: pools.Array.data[2].size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653134558724041295, guid: 37c4dc426c6acea4dab94930dffc97a8,
+        type: 3}
+      propertyPath: pools.Array.data[0].size
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5504743972747009961, guid: 37c4dc426c6acea4dab94930dffc97a8,
         type: 3}
