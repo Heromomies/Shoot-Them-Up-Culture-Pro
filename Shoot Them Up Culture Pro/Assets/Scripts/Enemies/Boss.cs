@@ -69,7 +69,7 @@ public class Boss : MonoBehaviour
         {
             panel.SetActive(true);
             gameObject.SetActive(false);
-            scoreFinal.text += GameManager.instance.score;
+            scoreFinal.text = GameManager.instance.score.ToString();
         }
     }
 }
