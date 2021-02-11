@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Boss : MonoBehaviour
@@ -14,7 +15,8 @@ public class Boss : MonoBehaviour
     private Vector2 _screenBounds;
     private bool _dirRight;
     private poolManager _poolManager;
-    
+
+    public TextMeshProUGUI scoreFinal;
     public void Start()
     {
         _poolManager = poolManager.instance;
@@ -67,6 +69,7 @@ public class Boss : MonoBehaviour
         {
             panel.SetActive(true);
             gameObject.SetActive(false);
+            scoreFinal.text += GameManager.instance.score;
         }
     }
 }
