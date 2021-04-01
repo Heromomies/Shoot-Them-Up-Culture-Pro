@@ -18,11 +18,13 @@ public class bullet : MonoBehaviour
         if (other.gameObject.GetComponent<EnemyLife>())
         {
             other.gameObject.GetComponent<EnemyLife>().Damage(1);
+            gameObject.SetActive(false);
         }
 
         if (other.gameObject.GetComponent<Boss>())
         {
             other.gameObject.GetComponent<Boss>().Damage(1);
+            gameObject.SetActive(false);
         }
     }
 }

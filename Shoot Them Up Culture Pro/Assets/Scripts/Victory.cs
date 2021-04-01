@@ -8,5 +8,6 @@ public class Victory : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(1);
+        Time.timeScale = 1f;
     }
 }
